@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../styles/global.css" />
+        <link rel="stylesheet" href="../styles/qna.css" />
+        <title>Question</title>
+    </head>
+    <body>
+        <h1>🙋🏻 정윤석님에게 질문합니다!</h1>
+        <div class="form-container">
+            <div class="content-box">
+                <img src="https://picsum.photos/78/78" alt="profile-image" />
+                <div class="detail">
+                    <h2>정윤석</h2>
+                    <p>질문 내용입니다. 하하하ㅏ.</p>
+                </div>
+            </div>
+            <form class="form-actions" action="main.html" method="get">
+                <div class="input-group">
+                    <label class="sr-only" for="answer">답변</label>
+                    <textarea
+                        id="answer"
+                        name="answer"
+                        placeholder="질문을 입력해주세요"
+                        required
+                    ></textarea>
+                </div>
+                <button type="submit">질문 보내기</button>
+            </form>
+        </div>
+    </body>
+</html>

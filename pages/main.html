@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../styles/global.css" />
+        <link rel="stylesheet" href="../styles/main.css" />
+        <title>Main Page</title>
+    </head>
+    <body>
+        <!-- Header: 페이지 상단에 위치하는 네비게이션 바 -->
+        <header>
+            <div class="container">
+                <div class="left-section">
+                    <h1>Example</h1>
+                    <nav>
+                        <ul>
+                            <li><a href="main.html">MAIN</a></li>
+                            <li><a href="#">MENU2</a></li>
+                            <li><a href="#">MENU3</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="right-section">
+                    <a href="profile.html" class="btn">프로필</a>
+                    <a href="index.html" class="btn">로그아웃</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main: 주요 콘텐츠를 담고 있는 부분 -->
+        <main>
+            <section class="question-section">
+                <h2>🙋🏻 누구에게 질문할까요?</h2>
+                <!-- 유저 리스트: 질문을 받을 수 있는 유저 카드들이 나열됨 -->
+                <div class="user-list">
+                    <!--
+                            유저 카드 컴포넌트 반복
+                            현재는 더미 데이터로 하드 코딩되어 있지만,
+                            추후에 서버에서 받아온 데이터를 이용하여 동적으로 렌더링할 수 있음
+                    -->
+                    <article
+                        class="user-card"
+                        onclick="location.href='ask_question.html'"
+                    >
+                        <img
+                            src="https://picsum.photos/78/78"
+                            alt="user-profile"
+                        />
+                        <div class="user-description">
+                            <h1 class="name">정윤석</h1>
+                            <span class="introduction">편하게 질문하세요.</span>
+                        </div>
+                        <div class="question-info">
+                            <span>💬 받은 질문</span>
+                            <span>999개</span>
+                        </div>
+                    </article>
+                    <!-- 유저 카드 컴포넌트 반복 -->
+                    <article
+                        class="user-card"
+                        onclick="location.href='ask_question.html'"
+                    >
+                        <img
+                            src="https://picsum.photos/78/78"
+                            alt="user-profile"
+                        />
+                        <div class="user-description">
+                            <h1 class="name">정윤석</h1>
+                            <span class="introduction">편하게 질문하세요.</span>
+                        </div>
+                        <div class="question-info">
+                            <span>💬 받은 질문</span>
+                            <span>999개</span>
+                        </div>
+                    </article>
+                    <!-- 유저 카드 컴포넌트 반복 -->
+                    <article
+                        class="user-card"
+                        onclick="location.href='ask_question.html'"
+                    >
+                        <img
+                            src="https://picsum.photos/78/78"
+                            alt="user-profile"
+                        />
+                        <div class="user-description">
+                            <h1 class="name">정윤석</h1>
+                            <span class="introduction">편하게 질문하세요.</span>
+                        </div>
+                        <div class="question-info">
+                            <span>💬 받은 질문</span>
+                            <span>999개</span>
+                        </div>
+                    </article>
+                    <!-- 유저 카드 컴포넌트 반복 -->
+                    <article
+                        class="user-card"
+                        onclick="location.href='ask_question.html'"
+                    >
+                        <img
+                            src="https://picsum.photos/78/78"
+                            alt="user-profile"
+                        />
+                        <div class="user-description">
+                            <h1 class="name">정윤석</h1>
+                            <span class="introduction">편하게 질문하세요.</span>
+                        </div>
+                        <div class="question-info">
+                            <span>💬 받은 질문</span>
+                            <span>999개</span>
+                        </div>
+                    </article>
+                    <!-- 유저 카드 컴포넌트 반복 -->
+                    <article
+                        class="user-card"
+                        onclick="location.href='ask_question.html'"
+                    >
+                        <img
+                            src="https://picsum.photos/78/78"
+                            alt="user-profile"
+                        />
+                        <div class="user-description">
+                            <h1 class="name">정윤석</h1>
+                            <span class="introduction">편하게 질문하세요.</span>
+                        </div>
+                        <div class="question-info">
+                            <span>💬 받은 질문</span>
+                            <span>999개</span>
+                        </div>
+                    </article>
+                    <!-- 유저 카드 컴포넌트 반복 -->
+                    <article
+                        class="user-card"
+                        onclick="location.href='ask_question.html'"
+                    >
+                        <img
+                            src="https://picsum.photos/78/78"
+                            alt="user-profile"
+                        />
+                        <div class="user-description">
+                            <h1 class="name">정윤석</h1>
+                            <span class="introduction">편하게 질문하세요.</span>
+                        </div>
+                        <div class="question-info">
+                            <span>💬 받은 질문</span>
+                            <span>999개</span>
+                        </div>
+                    </article>
+                    <!-- 유저 카드 컴포넌트 반복 -->
+                    <article
+                        class="user-card"
+                        onclick="location.href='ask_question.html'"
+                    >
+                        <img
+                            src="https://picsum.photos/78/78"
+                            alt="user-profile"
+                        />
+                        <div class="user-description">
+                            <h1 class="name">정윤석</h1>
+                            <span class="introduction">편하게 질문하세요.</span>
+                        </div>
+                        <div class="question-info">
+                            <span>💬 받은 질문</span>
+                            <span>999개</span>
+                        </div>
+                    </article>
+                    <!-- 유저 카드 컴포넌트 반복 -->
+                    <article
+                        class="user-card"
+                        onclick="location.href='ask_question.html'"
+                    >
+                        <img
+                            src="https://picsum.photos/78/78"
+                            alt="user-profile"
+                        />
+                        <div class="user-description">
+                            <h1 class="name">정윤석</h1>
+                            <span class="introduction">편하게 질문하세요.</span>
+                        </div>
+                        <div class="question-info">
+                            <span>💬 받은 질문</span>
+                            <span>999개</span>
+                        </div>
+                    </article>
+                    <!-- 유저 카드 컴포넌트 반복 -->
+                    <article
+                        class="user-card"
+                        onclick="location.href='ask_question.html'"
+                    >
+                        <img
+                            src="https://picsum.photos/78/78"
+                            alt="user-profile"
+                        />
+                        <div class="user-description">
+                            <h1 class="name">정윤석</h1>
+                            <span class="introduction">편하게 질문하세요.</span>
+                        </div>
+                        <div class="question-info">
+                            <span>💬 받은 질문</span>
+                            <span>999개</span>
+                        </div>
+                    </article>
+                    <!-- 유저 카드 컴포넌트 반복 -->
+                    <article
+                        class="user-card"
+                        onclick="location.href='ask_question.html'"
+                    >
+                        <img
+                            src="https://picsum.photos/78/78"
+                            alt="user-profile"
+                        />
+                        <div class="user-description">
+                            <h1 class="name">정윤석</h1>
+                            <span class="introduction">편하게 질문하세요.</span>
+                        </div>
+                        <div class="question-info">
+                            <span>💬 받은 질문</span>
+                            <span>999개</span>
+                        </div>
+                    </article>
+                    <!-- 더 많은 유저 카드가 여기에 추가될 수 있음 -->
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

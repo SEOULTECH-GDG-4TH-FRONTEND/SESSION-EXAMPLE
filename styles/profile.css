@@ -1,0 +1,87 @@
+/* main 요소 스타일: 콘텐츠를 중앙 정렬하고 일정한 마진 적용 */
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 32px 136px;
+}
+
+/* 프로필 이미지 스타일: 원형 모양으로 만들고 크기 지정 */
+.profile-section img {
+    border-radius: 50%;
+    width: 161px;
+    height: 161px;
+    margin-bottom: 23px;
+}
+
+/* 프로필 정보 섹션: 텍스트 중앙 정렬 및 간격 설정 */
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.profile-info h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.profile-info p {
+    font-size: 14px;
+    color: #949494;
+}
+
+/* 질문 섹션: 상단 마진과 전체 너비 설정 */
+.question-section {
+    margin-top: 40px;
+    width: 100%;
+}
+
+.question-section h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #454545;
+    margin-bottom: 28px;
+}
+
+/* 질문 리스트: 세로 정렬 및 항목 간 간격 설정 */
+.question-list {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+/* 각 질문 항목 스타일 */
+.question-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f5f5f5;
+    padding: 25px 30px;
+    border-radius: 21px;
+}
+
+.question-item p {
+    font-size: 24px;
+    font-weight: normal;
+}
+
+/* 버튼 스타일: 배경색, 테두리 제거 및 마우스 커서 설정 */
+.question-item button {
+    background-color: #d9d9d9;
+    border: none;
+    font-size: 24px;
+    padding: 23px 37px;
+    cursor: pointer;
+}
+
+/* 버튼 호버 시 색상 변경 */
+.question-item button:hover {
+    background-color: #c4c4c4;
+}
+
+.question-list {
+    max-height: 500px;
+    overflow-y: auto;
+}

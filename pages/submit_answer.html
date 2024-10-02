@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../styles/global.css" />
+        <link rel="stylesheet" href="../styles/qna.css" />
+        <title>Answer</title>
+    </head>
+    <body>
+        <h1>🙋🏻 답변을 보낼거에요!</h1>
+        <div class="form-container">
+            <div class="content-box">
+                <img src="https://picsum.photos/78/78" alt="profile-image" />
+                <div class="detail">
+                    <h2>정윤석</h2>
+                    <p>질문 내용입니다. 하하하ㅏ.</p>
+                </div>
+            </div>
+            <form class="form-actions" action="profile.html" method="get">
+                <div class="input-group">
+                    <label class="sr-only" for="answer">답변</label>
+                    <textarea
+                        id="answer"
+                        name="answer"
+                        placeholder="답변을 입력해주세요"
+                        required
+                    ></textarea>
+                </div>
+                <button type="submit">답변 보내기</button>
+            </form>
+        </div>
+    </body>
+</html>

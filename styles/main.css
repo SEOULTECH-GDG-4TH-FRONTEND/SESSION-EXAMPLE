@@ -1,0 +1,77 @@
+section {
+    margin: 82px 112px; /* 상하 좌우 margin 설정 */
+}
+
+section h2 {
+    margin-bottom: 44px;
+    color: #454545; /* 텍스트 색상 */
+}
+
+/* 유저 리스트: 카드형 배치 */
+.user-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(326px, 1fr)); /* 자동 채우기 */
+    gap: 39px; /* 카드 간 간격 */
+    max-width: 100%; /* 최대 너비 설정 */
+    overflow-x: auto; /* 가로 스크롤 허용 */
+}
+
+/* 유저 카드 기본 스타일 */
+.user-card {
+    background-color: #f5f5f5; /* 카드 배경색 */
+    border-radius: 21px; /* 둥근 모서리 */
+    padding: 16px;
+    box-sizing: border-box; /* padding을 포함한 전체 박스 크기 */
+    font-weight: bold;
+    cursor: pointer; /* 마우스 커서 모양 */
+}
+
+/* 프로필 이미지 스타일 */
+.user-card img {
+    border-radius: 74px; /* 둥근 모양 */
+    width: 78px;
+    height: 78px;
+    margin-bottom: 16px; /* 아래 여백 */
+}
+
+/* 유저 설명 영역 스타일 */
+.user-description {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 30px;
+}
+
+.user-description h1 {
+    font-size: 20px; /* 유저 이름 크기 */
+}
+
+.user-description span {
+    font-size: 14px;
+    color: #949494; /* 보조 텍스트 색상 */
+}
+
+/* 질문 정보 영역 */
+.question-info {
+    display: flex;
+    justify-content: space-between; /* 좌우 정렬 */
+    gap: 16px;
+}
+
+.question-info span {
+    font-size: 15px;
+    color: #949494;
+}
+
+/* 반응형 디자인: 화면 크기에 따라 다른 레이아웃 적용 */
+@media (max-width: 1300px) {
+    .user-list {
+        grid-template-columns: repeat(2, minmax(326px, 1fr)); /* 2열 배치 */
+    }
+}
+
+@media (max-width: 920px) {
+    .user-list {
+        grid-template-columns: 1fr; /* 1열 배치 */
+    }
+}

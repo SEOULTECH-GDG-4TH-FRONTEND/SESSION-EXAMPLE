@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../styles/global.css" />
+        <link rel="stylesheet" href="../styles/profile.css" />
+        <title>Profile</title>
+    </head>
+    <body>
+        <!-- Header: 페이지 상단에 위치하는 네비게이션 바 -->
+        <header>
+            <div class="container">
+                <div class="left-section">
+                    <h1>Example</h1>
+                    <nav>
+                        <ul>
+                            <li><a href="main.html">MAIN</a></li>
+                            <li><a href="#">MENU2</a></li>
+                            <li><a href="#">MENU3</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="right-section">
+                    <a href="profile.html" class="btn">프로필</a>
+                    <a href="index.html" class="btn">로그아웃</a>
+                </div>
+            </div>
+        </header>
+        <!-- Main: 프로필 및 질문 리스트 영역 -->
+        <main>
+            <!-- 프로필 섹션 -->
+            <section class="profile-section">
+                <img src="https://picsum.photos/161/161" alt="profile-image" />
+                <div class="profile-info">
+                    <h2>신민규</h2>
+                    <p>안녕하세요. 질문해주세요</p>
+                </div>
+            </section>
+
+            <!-- 질문 섹션 -->
+            <section class="question-section">
+                <h2>총 3개의 질문을 받았어요!</h2>
+                <div class="question-list">
+                    <!-- 질문 목록 -->
+                    <div class="question-item">
+                        <p>질문1</p>
+                        <button onclick="location.href='submit_answer.html'">
+                            답장하기
+                        </button>
+                    </div>
+                    <div class="question-item">
+                        <p>질문2</p>
+                        <button onclick="location.href='submit_answer.html'">
+                            답장하기
+                        </button>
+                    </div>
+                    <div class="question-item">
+                        <p>질문3</p>
+                        <button onclick="location.href='submit_answer.html'">
+                            답장하기
+                        </button>
+                    </div>
+                    <div class="question-item">
+                        <p>질문4</p>
+                        <button onclick="location.href='submit_answer.html'">
+                            답장하기
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="question-section">
+                <h2>총 3개의 질문을 했어요!!</h2>
+                <div class="question-list">
+                    <!-- 질문 목록 -->
+                    <div class="question-item">
+                        <p>질문1</p>
+                        <button onclick="location.href='view_answer1.html'">
+                            답변확인
+                        </button>
+                    </div>
+                    <div class="question-item">
+                        <p>질문2</p>
+                        <button onclick="location.href='view_answer1.html'">
+                            답변확인
+                        </button>
+                    </div>
+                    <div class="question-item">
+                        <p>질문3</p>
+                        <button onclick="location.href='view_answer1.html'">
+                            답변확인
+                        </button>
+                    </div>
+                    <div class="question-item">
+                        <p>질문4</p>
+                        <button onclick="location.href='view_answer1.html'">
+                            답변확인
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
