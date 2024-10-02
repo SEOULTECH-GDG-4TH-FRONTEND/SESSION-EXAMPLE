@@ -1,17 +1,28 @@
+/* 기본적인 문서의 여백을 설정합니다. 
+   전체 화면에서 body의 여백을 상하로 93px, 좌우로 118px 설정하여 
+   내용이 화면 중앙에 위치하게끔 합니다. */
 body {
     margin: 93px 118px;
 }
 
+/* h1 태그의 글꼴 크기와 하단 여백을 설정합니다. 
+   32px 크기의 제목을 사용하며, 제목과 다음 요소 사이에 44px 여백을 둡니다. */
 h1 {
     font-size: 32px;
     margin-bottom: 44px;
 }
 
+/* form-container는 자식 요소들을 세로로 배치하는 플렉스 박스 컨테이너입니다. 
+   flex-direction을 column으로 설정하여 자식 요소들이 위에서 아래로 쌓입니다. */
 .form-container {
     display: flex;
     flex-direction: column;
 }
 
+/* content-box는 각 콘텐츠 블록의 레이아웃을 정의합니다.
+   수평 정렬을 위해 align-items: center를 사용하고, 
+   요소들 사이에 13px 간격을 주며, 배경색과 둥근 테두리를 적용합니다.
+   텍스트는 볼드체로 표시됩니다. */
 .content-box {
     display: flex;
     align-items: center;
@@ -22,27 +33,38 @@ h1 {
     font-weight: bold;
 }
 
+/* content-box 내부의 이미지는 78px 크기로 설정하며, 
+   둥근 테두리를 74px로 설정하여 원형으로 보이게 만듭니다. */
 .content-box img {
     width: 78px;
     height: 78px;
     border-radius: 74px;
 }
 
+/* content-box 내의 h2 요소는 20px 크기의 글씨로 설정됩니다. */
 .content-box h2 {
     font-size: 20px;
 }
 
+/* content-box 내의 p 요소는 14px 크기의 글씨와 회색(#949494)을 사용합니다.
+   p 요소는 보조적인 텍스트로 사용되며, 색상은 눈에 덜 띄게 설정됩니다. */
 .content-box p {
     font-size: 14px;
     color: #949494;
 }
 
+/* form-actions 컨테이너는 플렉스 박스를 사용하여 자식 요소를 세로로 배치합니다.
+   입력 폼과 버튼의 하단에 40px의 여백을 둡니다. */
 .form-actions {
     margin-top: 40px;
     display: flex;
     flex-direction: column;
 }
 
+/* textarea는 100%의 너비를 차지하며, 높이는 364px로 설정합니다.
+   배경색은 회색(#f5f5f5)이며, 테두리는 없고 둥근 테두리(21px)를 설정하여 부드럽게 보이게 합니다.
+   padding과 margin-bottom을 통해 적절한 내부 여백과 외부 여백을 줍니다.
+   box-sizing: border-box를 설정하여 padding을 포함한 크기를 유지합니다. */
 textarea {
     width: 100%;
     max-width: 100%;
@@ -57,21 +79,28 @@ textarea {
     box-sizing: border-box;
 }
 
+/* textarea가 포커스 되었을 때, 기본적인 브라우저 테두리를 없앱니다. */
 textarea:focus {
     outline: none;
 }
 
+/* form-actions 내의 버튼은 고정된 너비(201px)와 높이(35px)를 가지며, 
+   버튼을 중앙에 정렬하기 위해 align-self: center를 사용합니다. */
 .form-actions button {
     width: 201px;
     height: 35px;
     align-self: center;
 }
 
+/* pagination 요소는 상단 여백(10px)과 중앙 정렬을 위해 align-self: center를 사용합니다. */
 .pagination {
     margin-top: 10px;
     align-self: center;
 }
 
+/* pagination의 링크는 오른쪽에 5px의 간격을 두고, 
+   패딩과 배경색, 텍스트 장식, 글자 색상을 설정합니다.
+   링크는 기본적으로 둥근 모서리를 가지고 있습니다. */
 .pagination a {
     margin-right: 5px;
     padding: 5px 10px;
@@ -81,6 +110,8 @@ textarea:focus {
     border-radius: 5px;
 }
 
+/* pagination의 링크에 hover 효과를 추가하여 마우스를 올렸을 때 
+   배경색이 어두운 회색(#ddd)으로 변경되게 합니다. */
 .pagination a:hover {
     background-color: #ddd;
 }

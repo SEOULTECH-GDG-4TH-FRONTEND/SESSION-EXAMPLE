@@ -1,59 +1,17 @@
-<!--
-    index.html: 로그인 페이지
-    index.html은 웹 페이지의 시작점이며,
-    이 프로젝트에서는 로그인 페이지를 담당합니다.
--->
 <!DOCTYPE html>
 <html lang="ko">
     <head>
-        <!-- 
-            UTF-8로 설정하여 다국어 문자 지원 
-            메타 태그는 문서의 기본 특성을 설정하는 데 사용
-        -->
         <meta charset="UTF-8" />
-
-        <!--
-            Viewport 메타 태그는 반응형 디자인을 지원하기 위해 사용됩니다.
-            특히 모바일 기기에서 페이지가 올바르게 렌더링되도록 합니다.
-        -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <!-- 
-            global.css: 전체 웹사이트에서 사용될 스타일 파일 
-            index.css: 이 로그인 페이지에 대한 스타일 파일 
-        -->
         <link rel="stylesheet" href="../styles/global.css" />
         <link rel="stylesheet" href="../styles/index.css" />
-
-        <!-- 
-            페이지의 제목을 설정 
-            브라우저 탭에 표시됩니다. 
-        -->
         <title>SignUp Page</title>
     </head>
     <body>
-        <!-- 
-            h1 태그로 로그인 페이지의 주요 제목을 설정
-            접근성 측면에서 중요한 요소
-        -->
         <h1>Sign Up</h1>
-
-        <!-- 
-            로그인 폼: 사용자가 아이디와 비밀번호를 입력 후 
-            제출하면 'main.html'로 이동하는 폼입니다.
-        -->
         <form action="index.html" method="get">
-            <!-- 
-                입력 그룹: ID와 비밀번호를 받기 위한 입력 필드를 그룹화 
-                sr-only 클래스는 화면에는 표시되지 않지만 스크린 리더에선 읽힙니다.
-            -->
             <div class="input-group">
                 <label class="sr-only" for="id">ID</label>
-                <!-- 
-                    텍스트 입력 필드: ID 입력 
-                    placeholder 속성으로 안내 텍스트를 표시 
-                    required 속성으로 필수 입력 필드로 지정 
-                -->
                 <input
                     type="text"
                     id="id"
@@ -61,13 +19,7 @@
                     placeholder="ID"
                     required
                 />
-
                 <label class="sr-only" for="password">Password</label>
-                <!-- 
-                    비밀번호 입력 필드: 비밀번호 입력 
-                    type="password"로 입력 내용을 숨김 
-                    required 속성으로 필수 입력 필드로 지정 
-                -->
                 <input
                     type="password"
                     id="password"
@@ -76,11 +28,6 @@
                     required
                 />
             </div>
-
-            <!--
-                버튼 그룹: 로그인과 회원가입 버튼을 그룹화 
-                회원가입 버튼은 'signup.html'로 이동 
-            -->
             <div class="button-group">
                 <button type="submit" class="btn">회원가입</button>
             </div>

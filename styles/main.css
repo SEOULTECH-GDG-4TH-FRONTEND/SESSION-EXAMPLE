@@ -1,13 +1,22 @@
+/* section 요소에 상하 82px, 좌우 112px의 여백을 설정합니다.
+   페이지 레이아웃에 일정한 공간을 주어 콘텐츠가 화면 가운데에 배치되도록 합니다. */
 section {
     margin: 82px 112px; /* 상하 좌우 margin 설정 */
 }
 
+/* section 내의 h2 제목 스타일을 설정합니다.
+   텍스트 하단에 44px의 여백을 주어 제목과 다음 요소 사이 간격을 확보하고,
+   텍스트 색상은 진한 회색(#454545)으로 설정합니다. */
 section h2 {
     margin-bottom: 44px;
     color: #454545; /* 텍스트 색상 */
 }
 
-/* 유저 리스트: 카드형 배치 */
+/* 유저 리스트를 카드형 레이아웃으로 배치합니다.
+   grid 레이아웃을 사용하여 한 줄에 3개의 카드를 배치하고,
+   각 카드의 최소 너비는 326px, 최대 너비는 남은 공간에 맞춰 1fr로 설정합니다.
+   카드들 간에는 39px의 간격을 두고, 리스트의 최대 너비를 100%로 제한하며,
+   넘치는 내용이 있을 경우 가로 스크롤을 허용합니다. */
 .user-list {
     display: grid;
     grid-template-columns: repeat(3, minmax(326px, 1fr)); /* 자동 채우기 */
@@ -16,7 +25,10 @@ section h2 {
     overflow-x: auto; /* 가로 스크롤 허용 */
 }
 
-/* 유저 카드 기본 스타일 */
+/* 유저 카드의 기본 스타일을 설정합니다.
+   배경색을 연한 회색(#f5f5f5)으로 지정하고, 둥근 모서리(21px)를 적용합니다.
+   패딩과 box-sizing: border-box로 카드 내 여백을 포함한 전체 크기를 설정하며,
+   텍스트는 볼드체로 설정되고, 마우스를 올리면 커서가 pointer로 바뀝니다. */
 .user-card {
     background-color: #f5f5f5; /* 카드 배경색 */
     border-radius: 21px; /* 둥근 모서리 */
@@ -26,7 +38,9 @@ section h2 {
     cursor: pointer; /* 마우스 커서 모양 */
 }
 
-/* 프로필 이미지 스타일 */
+/* 프로필 이미지 스타일을 설정합니다.
+   이미지를 원형으로 만들기 위해 border-radius를 74px로 설정하고,
+   크기는 가로세로 78px로 고정하며, 이미지 아래에 16px의 여백을 줍니다. */
 .user-card img {
     border-radius: 74px; /* 둥근 모양 */
     width: 78px;
@@ -34,7 +48,9 @@ section h2 {
     margin-bottom: 16px; /* 아래 여백 */
 }
 
-/* 유저 설명 영역 스타일 */
+/* 유저 설명 영역의 스타일을 설정합니다.
+   flexbox를 사용하여 유저 정보를 수직으로 배치하고, 
+   요소들 사이에 5px 간격을 두며, 전체 영역 아래에 30px의 여백을 추가합니다. */
 .user-description {
     display: flex;
     flex-direction: column;
@@ -42,34 +58,44 @@ section h2 {
     margin-bottom: 30px;
 }
 
+/* 유저 설명에서 이름(h1)의 스타일을 설정합니다.
+   유저 이름의 글꼴 크기를 20px로 설정합니다. */
 .user-description h1 {
     font-size: 20px; /* 유저 이름 크기 */
 }
 
+/* 유저 설명에서 보조 텍스트(span)의 스타일을 설정합니다.
+   글꼴 크기를 14px로 설정하고, 색상은 연한 회색(#949494)으로 지정합니다. */
 .user-description span {
     font-size: 14px;
     color: #949494; /* 보조 텍스트 색상 */
 }
 
-/* 질문 정보 영역 */
+/* 질문 정보 영역 스타일을 설정합니다.
+   flexbox를 사용하여 좌우로 항목을 정렬하고, 각 항목들 사이에 16px 간격을 둡니다. */
 .question-info {
     display: flex;
     justify-content: space-between; /* 좌우 정렬 */
     gap: 16px;
 }
 
+/* 질문 정보 영역의 텍스트(span) 스타일을 설정합니다.
+   글꼴 크기를 15px로 설정하고, 텍스트 색상은 연한 회색(#949494)으로 지정합니다. */
 .question-info span {
     font-size: 15px;
     color: #949494;
 }
 
-/* 반응형 디자인: 화면 크기에 따라 다른 레이아웃 적용 */
+/* 반응형 디자인을 위한 미디어 쿼리입니다.
+   화면 너비가 1300px 이하로 줄어들 경우, 유저 리스트를 2열로 재배치합니다. */
 @media (max-width: 1300px) {
     .user-list {
         grid-template-columns: repeat(2, minmax(326px, 1fr)); /* 2열 배치 */
     }
 }
 
+/* 화면 너비가 920px 이하로 줄어들 경우, 유저 리스트를 1열로 배치하여 
+   모바일 화면에서도 쉽게 볼 수 있도록 레이아웃을 조정합니다. */
 @media (max-width: 920px) {
     .user-list {
         grid-template-columns: 1fr; /* 1열 배치 */

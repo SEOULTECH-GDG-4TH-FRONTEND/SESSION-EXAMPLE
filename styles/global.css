@@ -1,79 +1,100 @@
+/* Google Fonts에서 Inter 폰트를 불러옵니다.
+   Inter 폰트는 다양한 글꼴 크기와 굵기를 지원합니다. */
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
+/* body 요소에 기본 폰트 패밀리를 Inter로 설정하고, 
+      sans-serif를 대체 폰트로 지정합니다. */
 body {
     font-family: "Inter", sans-serif;
 }
 
-/* 스크린 리더 전용 클래스: 화면에서는 완전히 숨기지만, 스크린 리더에서 읽을 수 있도록 설정 */
+/* 스크린 리더 전용 클래스.
+      이 클래스를 사용하는 요소는 화면에서는 보이지 않지만, 
+      스크린 리더에서는 인식할 수 있도록 설정합니다. */
 .sr-only {
-    position: absolute; /* 화면에서 절대 위치로 설정 */
-    width: 1px; /* 폭 1px */
-    height: 1px; /* 높이 1px */
-    margin: -1px; /* 화면 밖으로 밀어냄 */
-    padding: 0; /* 패딩 없음 */
-    border: 0; /* 테두리 없음 */
-    clip: rect(0, 0, 0, 0); /* 클리핑 영역을 설정하여 화면에서 보이지 않도록 */
-    overflow: hidden; /* 넘치는 내용 숨기기 */
+    position: absolute; /* 요소를 절대 위치로 배치 */
+    width: 1px; /* 폭을 1px로 설정 */
+    height: 1px; /* 높이를 1px로 설정 */
+    margin: -1px; /* 요소를 화면 밖으로 밀어냄 */
+    padding: 0; /* 패딩을 없앰 */
+    border: 0; /* 테두리 제거 */
+    clip: rect(0, 0, 0, 0); /* 클리핑 영역 설정하여 보이지 않도록 만듦 */
+    overflow: hidden; /* 넘치는 내용 숨김 */
 }
 
-/* Reset CSS */
+/* 기본적인 Reset CSS.
+      모든 요소의 기본 여백과 패딩을 제거하여 스타일 초기화를 수행합니다. */
 * {
     margin: 0;
     padding: 0;
 }
 
-/* Header 영역 스타일 */
+/* Header 영역의 스타일을 정의합니다.
+      배경색을 연한 회색(#c3c3c3)으로 설정하고, 
+      높이를 58px로 고정하며, 가로 정렬을 위해 flexbox를 사용합니다.
+      세로로는 가운데 정렬되도록 align-items: center를 사용합니다. */
 header {
     background-color: #c3c3c3; /* 헤더 배경색 */
     height: 58px; /* 헤더 높이 */
     display: flex; /* 가로 정렬을 위한 flexbox */
     align-items: center; /* 세로 정렬 */
-    width: 100%;
+    width: 100%; /* 전체 너비 설정 */
 }
 
+/* Header 내에 container 클래스가 적용된 요소에 flexbox를 적용하여, 
+      내부 요소들을 좌우로 나누고, 각각의 끝에 배치하도록 설정합니다.
+      좌우 padding은 23px로 설정합니다. */
 header .container {
-    display: flex; /* 좌우로 나뉜 섹션 배치 */
-    align-items: center;
+    display: flex; /* 좌우로 섹션 배치 */
+    align-items: center; /* 세로 정렬 */
     justify-content: space-between; /* 양쪽 끝에 배치 */
-    width: 100%;
+    width: 100%; /* 너비를 100%로 설정 */
     padding: 0 23px; /* 좌우 padding 설정 */
 }
 
-/* Header 내부 섹션 스타일 */
+/* Header의 좌측 및 우측 섹션을 flexbox로 설정하고,
+      요소들 사이의 간격을 16px로 지정합니다. */
 header .container .left-section,
 header .container .right-section {
     display: flex;
-    align-items: center;
-    gap: 16px; /* 요소 사이 간격 */
+    align-items: center; /* 세로 정렬 */
+    gap: 16px; /* 요소 간 간격 */
 }
 
-/* 네비게이션 메뉴 스타일 */
+/* 네비게이션 메뉴를 flexbox로 배치하여 가로로 정렬합니다.
+      기본적인 리스트 스타일(불릿 등)을 제거합니다. */
 header .container .left-section ul {
     display: flex;
-    list-style: none; /* 기본 리스트 스타일 제거 */
+    list-style: none; /* 리스트 스타일 제거 */
     margin: 0;
     padding: 0;
 }
 
+/* 네비게이션 메뉴 항목들에 오른쪽 여백을 32px 주어 각 메뉴 사이의 간격을 확보합니다. */
 header .container .left-section ul li {
     margin-right: 32px; /* 메뉴 항목 사이 간격 */
 }
 
+/* 네비게이션 메뉴 링크에 스타일을 적용합니다.
+      링크의 밑줄을 제거하고, 텍스트 색상을 회색(#454545)으로 설정하며,
+      글자 크기(16px)와 글자 굵기(볼드체)를 적용합니다. */
 header .container .left-section ul li a {
     text-decoration: none; /* 링크 밑줄 제거 */
     color: #454545; /* 텍스트 색상 */
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 16px; /* 글자 크기 설정 */
+    font-weight: bold; /* 글자 굵기 설정 */
 }
 
-/* 링크에 hover 효과 추가 */
+/* 네비게이션 메뉴 링크에 hover 효과를 추가합니다.
+      마우스를 올렸을 때 텍스트 색상이 검정(#000)으로 변경되도록 합니다. */
 header .container .left-section ul li a:hover {
-    color: #000;
+    color: #000; /* hover 시 텍스트 색상 변경 */
 }
 
-/* 제목 및 서브 제목 스타일 */
+/* 제목(h1) 및 부제목(h2)의 스타일을 정의합니다.
+      두 요소 모두 글자 크기를 32px로 설정하고, 볼드체로 글자 굵기를 강조합니다. */
 h1,
 h2 {
-    font-size: 32px;
-    font-weight: bold;
+    font-size: 32px; /* 글자 크기 설정 */
+    font-weight: bold; /* 글자 굵기 설정 */
 }
