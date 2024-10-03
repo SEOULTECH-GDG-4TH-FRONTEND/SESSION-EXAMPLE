@@ -8,26 +8,56 @@
         <title>Answer</title>
     </head>
     <body>
+        <!-- 
+            h1 태그: 페이지의 주요 제목으로, 
+            사용자에게 답변을 확인하는 페이지임을 알림
+        -->
         <h1>🙋🏻 답변을 확인하세요!</h1>
+
+        <!-- 
+            form-container: 답변과 관련된 정보를 담고 있는 컨테이너
+        -->
         <div class="form-container">
+            <!-- 
+                content-box: 답변자의 프로필 이미지와 메시지를 담고 있는 박스
+            -->
             <div class="content-box">
+                <!-- 
+                    프로필 이미지: 답변자의 프로필 이미지를 표시
+                    alt 속성으로 대체 텍스트를 제공하여 접근성 보장
+                -->
                 <img src="https://picsum.photos/78/78" alt="profile-image" />
+
+                <!-- 
+                    detail: 답변자의 이름과 프로필 메시지를 포함한 세부 정보
+                -->
                 <div class="detail">
-                    <h2>노경인</h2>
+                    <h2>조유찬</h2>
                     <p>두 번째 답변자의 프로필 메세지입니다.</p>
                 </div>
             </div>
+
+            <!-- 
+                form-actions: 답변 내용을 보여주는 영역
+                textarea는 readonly 속성으로 읽기 전용으로 설정되어 있음
+            -->
             <div class="form-actions">
                 <div class="input-group">
                     <label class="sr-only" for="answer">답변 2</label>
+                    <!-- 
+                        textarea: 첫 번째 답변 내용을 표시
+                        readonly 속성으로 답변 내용을 수정할 수 없게 설정
+                    -->
                     <textarea id="answer" name="answer" readonly>
 이것은 두 번째 답변입니다.
-                </textarea
-                    >
+                    </textarea>
                 </div>
             </div>
 
-            <!-- Pagination -->
+            <!-- 
+                Pagination: 여러 개의 답변을 탐색할 수 있는 페이지네이션
+                각 숫자는 다른 답변 페이지로 이동하는 링크를 포함
+            -->
             <div class="pagination">
                 <a href="view_answer1.html">1</a>
                 <a href="view_answer2.html">2</a>

@@ -8,10 +8,30 @@
         <title>SignUp Page</title>
     </head>
     <body>
+        <!-- 
+            h1 태그: 페이지의 주요 제목으로, 
+            회원가입 페이지임을 사용자에게 알림
+        -->
         <h1>Sign Up</h1>
+
+        <!-- 
+            회원가입 폼: 사용자가 ID와 비밀번호를 입력 후 회원가입을 완료하는 폼
+            action 속성은 회원가입 완료 후 index.html 페이지로 이동하도록 설정
+        -->
         <form action="index.html" method="get">
+            <!-- 
+                입력 그룹: ID와 비밀번호 입력 필드를 그룹화한 섹션
+            -->
             <div class="input-group">
+                <!-- 
+                    label 태그: 스크린 리더를 위한 ID 필드 설명, 화면에는 표시되지 않음
+                -->
                 <label class="sr-only" for="id">ID</label>
+                <!-- 
+                    텍스트 입력 필드: ID 입력을 위한 필드
+                    placeholder로 "ID" 텍스트를 표시하여 사용자에게 안내
+                    required 속성으로 필수 입력 필드로 설정
+                -->
                 <input
                     type="text"
                     id="id"
@@ -19,7 +39,16 @@
                     placeholder="ID"
                     required
                 />
+
+                <!-- 
+                    label 태그: 스크린 리더를 위한 비밀번호 필드 설명, 화면에는 표시되지 않음
+                -->
                 <label class="sr-only" for="password">Password</label>
+                <!-- 
+                    비밀번호 입력 필드: 비밀번호 입력을 위한 필드
+                    type="password"로 입력 내용을 숨김
+                    required 속성으로 필수 입력 필드로 설정
+                -->
                 <input
                     type="password"
                     id="password"
@@ -28,6 +57,11 @@
                     required
                 />
             </div>
+
+            <!-- 
+                버튼 그룹: 회원가입 버튼을 그룹화
+                사용자가 입력을 완료하고 회원가입을 제출하는 버튼
+            -->
             <div class="button-group">
                 <button type="submit" class="btn">회원가입</button>
             </div>

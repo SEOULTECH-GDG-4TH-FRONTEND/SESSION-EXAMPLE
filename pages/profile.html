@@ -8,11 +8,20 @@
         <title>Profile</title>
     </head>
     <body>
-        <!-- Header: 페이지 상단에 위치하는 네비게이션 바 -->
+        <!-- 
+            Header: 페이지 상단의 네비게이션 바
+            Example 로고와 페이지 내 다른 메뉴로 이동할 수 있는 링크들로 구성됨
+        -->
         <header>
             <div class="container">
+                <!-- 
+                    left-section: 로고와 네비게이션 메뉴를 담고 있는 영역
+                -->
                 <div class="left-section">
                     <h1>Example</h1>
+                    <!-- 
+                        nav: 내비게이션 메뉴로 다른 페이지로 이동하는 링크들
+                    -->
                     <nav>
                         <ul>
                             <li><a href="main.html">MAIN</a></li>
@@ -21,28 +30,52 @@
                         </ul>
                     </nav>
                 </div>
+                <!-- 
+                    right-section: 프로필과 로그아웃 버튼을 포함한 영역
+                    각 버튼은 다른 페이지로 이동함
+                -->
                 <div class="right-section">
                     <a href="profile.html" class="btn">프로필</a>
                     <a href="index.html" class="btn">로그아웃</a>
                 </div>
             </div>
         </header>
-        <!-- Main: 프로필 및 질문 리스트 영역 -->
+
+        <!-- 
+            Main: 프로필 정보와 질문 리스트를 표시하는 주요 콘텐츠 영역
+        -->
         <main>
-            <!-- 프로필 섹션 -->
+            <!-- 
+                프로필 섹션: 사용자의 프로필 이미지와 정보(이름, 소개)를 표시
+            -->
             <section class="profile-section">
+                <!-- 
+                    프로필 이미지: 사용자 프로필 이미지를 표시
+                    alt 속성으로 이미지가 로드되지 않을 경우 대체 텍스트를 제공
+                -->
                 <img src="https://picsum.photos/161/161" alt="profile-image" />
+                <!-- 
+                    profile-info: 사용자의 이름과 소개 문구를 표시
+                -->
                 <div class="profile-info">
                     <h2>신민규</h2>
                     <p>안녕하세요. 질문해주세요</p>
                 </div>
             </section>
 
-            <!-- 질문 섹션 -->
+            <!-- 
+                질문 섹션: 사용자가 받은 질문 목록을 표시
+                총 질문 수와 각 질문에 대한 답변 버튼을 포함
+            -->
             <section class="question-section">
                 <h2>총 3개의 질문을 받았어요!</h2>
+                <!-- 
+                    question-list: 질문 목록을 담는 컨테이너
+                -->
                 <div class="question-list">
-                    <!-- 질문 목록 -->
+                    <!-- 
+                        질문 아이템: 각 질문과 답변 버튼을 포함한 개별 항목
+                    -->
                     <div class="question-item">
                         <p>질문1</p>
                         <button onclick="location.href='submit_answer.html'">
@@ -70,10 +103,19 @@
                 </div>
             </section>
 
+            <!-- 
+                질문 섹션: 사용자가 질문한 내용을 표시
+                총 질문 수와 각 질문에 대한 답변 확인 버튼을 포함
+            -->
             <section class="question-section">
                 <h2>총 3개의 질문을 했어요!!</h2>
+                <!-- 
+                    question-list: 사용자가 질문한 질문 목록을 담는 컨테이너
+                -->
                 <div class="question-list">
-                    <!-- 질문 목록 -->
+                    <!-- 
+                        질문 아이템: 각 질문과 답변 확인 버튼을 포함한 개별 항목
+                    -->
                     <div class="question-item">
                         <p>질문1</p>
                         <button onclick="location.href='view_answer1.html'">

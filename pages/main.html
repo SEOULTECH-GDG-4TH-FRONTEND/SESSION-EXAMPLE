@@ -8,11 +8,20 @@
         <title>Main Page</title>
     </head>
     <body>
-        <!-- Header: 페이지 상단에 위치하는 네비게이션 바 -->
+        <!-- 
+            Header: 페이지 상단의 네비게이션 바
+            Example 로고와 페이지 내 다른 메뉴로 이동할 수 있는 링크들로 구성됨
+        -->
         <header>
             <div class="container">
+                <!-- 
+                    left-section: 로고와 네비게이션 메뉴를 담고 있는 영역
+                -->
                 <div class="left-section">
                     <h1>Example</h1>
+                    <!-- 
+                        nav: 내비게이션 메뉴로 다른 페이지로 이동하는 링크들
+                    -->
                     <nav>
                         <ul>
                             <li><a href="main.html">MAIN</a></li>
@@ -21,6 +30,10 @@
                         </ul>
                     </nav>
                 </div>
+                <!-- 
+                    right-section: 프로필과 로그아웃 버튼을 포함하는 영역
+                    각 버튼은 다른 페이지로 이동함
+                -->
                 <div class="right-section">
                     <a href="profile.html" class="btn">프로필</a>
                     <a href="index.html" class="btn">로그아웃</a>
@@ -28,34 +41,64 @@
             </div>
         </header>
 
-        <!-- Main: 주요 콘텐츠를 담고 있는 부분 -->
+        <!-- 
+            main 태그: 페이지의 주요 콘텐츠를 감싸는 의미론적 태그
+            main 태그는 HTML5에서 소개되었으며, 이 태그를 사용함으로써 브라우저나
+            스크린 리더가 페이지의 주요 콘텐츠를 빠르게 식별할 수 있도록 도움
+            main 태그 안에 있는 콘텐츠는 페이지의 핵심 내용임을 명시
+            'question-section'은 질문과 관련된 콘텐츠를 포함함
+        -->
         <main>
+            <!-- 
+                section 태그: 콘텐츠를 논리적으로 그룹화하는 의미론적 태그
+                관련된 내용을 하나의 단위로 묶어줌으로써, 콘텐츠를 더욱 구조화할 수 있음
+                section 태그는 문서의 한 부분을 나타내며, 각 섹션은 고유한 주제 또는 
+                목적을 가짐
+                question-section: 사용자에게 질문을 할 수 있는 영역
+            -->
             <section class="question-section">
                 <h2>🙋🏻 누구에게 질문할까요?</h2>
-                <!-- 유저 리스트: 질문을 받을 수 있는 유저 카드들이 나열됨 -->
+                <!-- 
+                    user-list: 질문을 받을 수 있는 유저 카드들이 나열되는 리스트
+                -->
                 <div class="user-list">
                     <!--
-                            유저 카드 컴포넌트 반복
-                            현재는 더미 데이터로 하드 코딩되어 있지만,
-                            추후에 서버에서 받아온 데이터를 이용하여 동적으로 렌더링할 수 있음
+                        article 태그: 독립적인 콘텐츠 블록을 나타냄
+                        여기서는 각 유저 카드를 나타냄
+                        유저 카드: 특정 유저의 프로필과 질문 정보를 표시하는 카드
+                        클릭 시 'ask_question.html'로 이동하여 해당 유저에게 질문 가능
                     -->
                     <article
                         class="user-card"
                         onclick="location.href='ask_question.html'"
                     >
+                        <!-- 
+                            프로필 이미지: 유저의 프로필 이미지를 표시 
+                        -->
                         <img
                             src="https://picsum.photos/78/78"
                             alt="user-profile"
                         />
+                        <!-- 
+                            유저의 이름과 간단한 소개를 포함한 설명 영역
+                        -->
                         <div class="user-description">
                             <h1 class="name">정윤석</h1>
                             <span class="introduction">편하게 질문하세요.</span>
                         </div>
+                        <!-- 
+                            question-info: 해당 유저가 받은 질문 수를 표시하는 정보 영역
+                        -->
                         <div class="question-info">
                             <span>💬 받은 질문</span>
                             <span>999개</span>
                         </div>
                     </article>
+
+                    <!-- 
+                        유저 카드 컴포넌트가 반복되어 여러 유저를 나열함
+                        실제로는 서버에서 동적으로 데이터를 받아와서 렌더링 가능
+                    -->
                     <!-- 유저 카드 컴포넌트 반복 -->
                     <article
                         class="user-card"
@@ -74,7 +117,8 @@
                             <span>999개</span>
                         </div>
                     </article>
-                    <!-- 유저 카드 컴포넌트 반복 -->
+
+                    <!-- 추가 유저 카드 반복 -->
                     <article
                         class="user-card"
                         onclick="location.href='ask_question.html'"
@@ -92,133 +136,7 @@
                             <span>999개</span>
                         </div>
                     </article>
-                    <!-- 유저 카드 컴포넌트 반복 -->
-                    <article
-                        class="user-card"
-                        onclick="location.href='ask_question.html'"
-                    >
-                        <img
-                            src="https://picsum.photos/78/78"
-                            alt="user-profile"
-                        />
-                        <div class="user-description">
-                            <h1 class="name">정윤석</h1>
-                            <span class="introduction">편하게 질문하세요.</span>
-                        </div>
-                        <div class="question-info">
-                            <span>💬 받은 질문</span>
-                            <span>999개</span>
-                        </div>
-                    </article>
-                    <!-- 유저 카드 컴포넌트 반복 -->
-                    <article
-                        class="user-card"
-                        onclick="location.href='ask_question.html'"
-                    >
-                        <img
-                            src="https://picsum.photos/78/78"
-                            alt="user-profile"
-                        />
-                        <div class="user-description">
-                            <h1 class="name">정윤석</h1>
-                            <span class="introduction">편하게 질문하세요.</span>
-                        </div>
-                        <div class="question-info">
-                            <span>💬 받은 질문</span>
-                            <span>999개</span>
-                        </div>
-                    </article>
-                    <!-- 유저 카드 컴포넌트 반복 -->
-                    <article
-                        class="user-card"
-                        onclick="location.href='ask_question.html'"
-                    >
-                        <img
-                            src="https://picsum.photos/78/78"
-                            alt="user-profile"
-                        />
-                        <div class="user-description">
-                            <h1 class="name">정윤석</h1>
-                            <span class="introduction">편하게 질문하세요.</span>
-                        </div>
-                        <div class="question-info">
-                            <span>💬 받은 질문</span>
-                            <span>999개</span>
-                        </div>
-                    </article>
-                    <!-- 유저 카드 컴포넌트 반복 -->
-                    <article
-                        class="user-card"
-                        onclick="location.href='ask_question.html'"
-                    >
-                        <img
-                            src="https://picsum.photos/78/78"
-                            alt="user-profile"
-                        />
-                        <div class="user-description">
-                            <h1 class="name">정윤석</h1>
-                            <span class="introduction">편하게 질문하세요.</span>
-                        </div>
-                        <div class="question-info">
-                            <span>💬 받은 질문</span>
-                            <span>999개</span>
-                        </div>
-                    </article>
-                    <!-- 유저 카드 컴포넌트 반복 -->
-                    <article
-                        class="user-card"
-                        onclick="location.href='ask_question.html'"
-                    >
-                        <img
-                            src="https://picsum.photos/78/78"
-                            alt="user-profile"
-                        />
-                        <div class="user-description">
-                            <h1 class="name">정윤석</h1>
-                            <span class="introduction">편하게 질문하세요.</span>
-                        </div>
-                        <div class="question-info">
-                            <span>💬 받은 질문</span>
-                            <span>999개</span>
-                        </div>
-                    </article>
-                    <!-- 유저 카드 컴포넌트 반복 -->
-                    <article
-                        class="user-card"
-                        onclick="location.href='ask_question.html'"
-                    >
-                        <img
-                            src="https://picsum.photos/78/78"
-                            alt="user-profile"
-                        />
-                        <div class="user-description">
-                            <h1 class="name">정윤석</h1>
-                            <span class="introduction">편하게 질문하세요.</span>
-                        </div>
-                        <div class="question-info">
-                            <span>💬 받은 질문</span>
-                            <span>999개</span>
-                        </div>
-                    </article>
-                    <!-- 유저 카드 컴포넌트 반복 -->
-                    <article
-                        class="user-card"
-                        onclick="location.href='ask_question.html'"
-                    >
-                        <img
-                            src="https://picsum.photos/78/78"
-                            alt="user-profile"
-                        />
-                        <div class="user-description">
-                            <h1 class="name">정윤석</h1>
-                            <span class="introduction">편하게 질문하세요.</span>
-                        </div>
-                        <div class="question-info">
-                            <span>💬 받은 질문</span>
-                            <span>999개</span>
-                        </div>
-                    </article>
-                    <!-- 더 많은 유저 카드가 여기에 추가될 수 있음 -->
+                    <!-- 더 많은 유저 카드가 추가될 수 있음 -->
                 </div>
             </section>
         </main>

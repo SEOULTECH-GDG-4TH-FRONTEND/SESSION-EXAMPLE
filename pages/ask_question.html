@@ -8,18 +8,52 @@
         <title>Question</title>
     </head>
     <body>
+        <!-- 
+            h1 태그: 페이지의 주요 제목으로,
+            사용자에게 질문하는 페이지임을 알립니다.
+            접근성을 고려한 중요한 요소입니다.
+        -->
         <h1>🙋🏻 정윤석님에게 질문합니다!</h1>
+
+        <!-- 
+            form-container: 질문 내용과 답변을 입력하는 폼을 감싸는 컨테이너
+        -->
         <div class="form-container">
+            <!-- 
+                content-box: 질문자의 프로필 이미지와 질문 내용을 담은 박스
+            -->
             <div class="content-box">
+                <!-- 
+                    프로필 이미지: 정윤석님의 프로필 이미지로 대체됩니다.
+                    alt 속성을 사용하여 접근성을 높임.
+                -->
                 <img src="https://picsum.photos/78/78" alt="profile-image" />
+
+                <!-- 
+                    detail: 질문자의 이름과 질문 내용을 표시하는 영역
+                -->
                 <div class="detail">
                     <h2>정윤석</h2>
                     <p>질문 내용입니다. 하하하ㅏ.</p>
                 </div>
             </div>
+
+            <!-- 
+                form-actions: 답변을 입력하고 제출하는 폼
+                'main.html'로 답변 데이터를 전송합니다.
+            -->
             <form class="form-actions" action="main.html" method="get">
+                <!-- 
+                    input-group: 답변을 입력할 수 있는 텍스트 영역을 그룹화
+                    label 태그는 시각적으로 숨겨지지만 스크린 리더에 의해 읽힙니다.
+                -->
                 <div class="input-group">
                     <label class="sr-only" for="answer">답변</label>
+                    <!-- 
+                        textarea: 답변을 입력하는 텍스트 영역
+                        placeholder 속성으로 안내 문구를 제공하며,
+                        required 속성으로 필수 입력 필드로 지정됨
+                    -->
                     <textarea
                         id="answer"
                         name="answer"
@@ -27,6 +61,10 @@
                         required
                     ></textarea>
                 </div>
+
+                <!-- 
+                    버튼: 답변을 제출하는 버튼으로, 사용자가 입력한 답변을 전송합니다.
+                -->
                 <button type="submit">질문 보내기</button>
             </form>
         </div>
