@@ -98,3 +98,7 @@ h2 {
     font-size: 32px; /* 글자 크기 설정 */
     font-weight: bold; /* 글자 굵기 설정 */
 }
+
+img {
+    background-color: yellow;
+}
